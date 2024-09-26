@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hai Emak Cantik</title>
+    <style>
+      /* CSS untuk menengahkan semua elemen */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f7f7f7;
+        margin: 0;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      /* Styling untuk gambar */
+      img {
+        height: 150px;
+        border: 5px solid #333; /* Border hitam */
+        border-radius: 15px; /* Border melengkung */
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        margin-bottom: 20px;
+      }
+
+      /* Efek animasi fade-in untuk gambar */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Styling untuk button */
+      .button-container {
+        display: flex;
+        gap: 20px; /* Jarak antara tombol */
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border: 2px solid #333;
+        background-color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      /* Hover efek pada tombol */
+      button:hover {
+        transform: scale(1.1);
+        background-color: #f0f0f0;
+      }
+
+      /* Mengatur posisi tombol "gamau" saat diklik atau di-hover */
+      .moveable {
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>haii emaa cantikk</h1>
+    <div
+      class="tenor-gif-embed"
+      data-postid="1555954360060729022"
+      data-share-method="host"
+      data-aspect-ratio="1"
+      data-width="50%"
+    >
+      <a
+        href="https://tenor.com/view/peach-goma-goma-peach-peach-and-goma-peach-goma-whatsapp-status-peach-goma-fight-gif-1555954360060729022"
+        >Peach Goma Goma Peach GIF</a
+      >
+      from
+      <a href="https://tenor.com/search/peach+goma-gifs">Peach Goma GIFs</a>
+    </div>
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
+
+    <!-- Gambar dengan border melengkung -->
+    <img src="img/ema.jpg" alt="image" />
+
+    <h1>Maukah kamu bertemu denganku???</h1>
+
+    <!-- Container untuk button agar sejajar -->
+    <div class="button-container">
+      <button id="btn_mau_banget" onclick="alert('I LOVE YOU EMA')">
+        mau banget
+      </button>
+      <button id="btn_gamau" onclick="gamau(this)">gamau</button>
+    </div>
+
+    <script>
+      // Fungsi untuk memindahkan tombol secara acak
+      function gamau(id) {
+        // Tambahkan kelas untuk memindahkan posisi secara acak
+        id.classList.add("moveable");
+
+        // Menghasilkan posisi acak di layar
+        var i = Math.floor(
+          Math.random() * (window.innerWidth - id.offsetWidth)
+        );
+        var j = Math.floor(
+          Math.random() * (window.innerHeight - id.offsetHeight)
+        );
+        // Memindahkan tombol ke posisi baru
+        id.style.left = i + "px";
+        id.style.top = j + "px";
+      }
+
+      // Event listener untuk tombol saat di-hover
+      document
+        .getElementById("btn_gamau")
+        .addEventListener("mouseenter", function () {
+          gamau(this);
+        });
+    </script>
+  </body>
+</html>
